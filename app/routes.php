@@ -1,6 +1,7 @@
 <?php
-$app->get('/', function(Request $request, Response $response) {
-	return  $this->view->render($response, "home.twig");
+
+$app->get('/', function($request, $response) {
+	return  $this->view->render($response, 'home.twig');
 });
 
 
