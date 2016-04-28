@@ -26,11 +26,11 @@
 			
 				<li{% if active_page == 'portfolio' %} class="active"{% endif %}><a href="{{ path_for('portfolio') }}">Portfolio</a></li>
 				
-				<li>{% if active_page == 'whatWeDo' %} class="active"{% endif %}<a href="">What We Do</a></li>
+				<li>{% if active_page == 'what' %} class="active"{% endif %}<a href="{{ path_for('what') }}">What We Do</a></li>
 				
-				<li>{% if active_page == 'aboutUs' %} class="active"{% endif %}<a href="">About Us</a></li>
+				<li>{% if active_page == 'about' %} class="active"{% endif %}<a href="{{ path_for('about') }}">About Us</a></li>
 				
-				<li>{% if active_page == 'ContactUs' %} class="active"{% endif %}<a href="">Contact Us</a></li>
+				<li>{% if active_page == 'contact' %} class="active"{% endif %}<a href="{{ path_for('contact') }}">Contact Us</a></li>
 
 			</ul>
 		
