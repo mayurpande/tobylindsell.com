@@ -13,8 +13,9 @@ $container = $app->getContainer();
 
 // Register component on container
 $container['view'] = function ($container) {
-    $view = new \Slim\Views\Twig('/templates', [
+	$view = new \Slim\Views\Twig(__DIR__ . '/templates', [
 		'debug' => true,
+		'cache' => false,
     ]);
     $view->addExtension(new \Slim\Views\TwigExtension(
         $container['router'],
