@@ -1,7 +1,5 @@
 <?php
-
-$app->get('/', function($request, $response) {
-	return  $this->view->render($response, 'home.twig');
-});
+//calls homecontroller index fn
+$app->get('/','HomeController:index');
 
 
