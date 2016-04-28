@@ -2,13 +2,16 @@
 
 namespace App\Controllers;
 
-class HomeController{
+//necessary because we are passing slim views instance
+use Slim\Views\Twig as View;
+
+class HomeController extends Controller{
+	
 
 	public function index($request, $response){
-	/* we cannot access the views with this line below
-	 *
-	 * return $this->view->render($response, 'home.twig')
-	 */
+	 //now we can use this view object and render the views
+	//we now have access to our whole container because we have the container in our base controller 
+		return $this->view->render($response, 'home.twig');
 	}
 }
 
