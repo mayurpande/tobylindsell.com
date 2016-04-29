@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
-		<title>Welcome to Toby.com!</title>
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% block head %}
+			<meta charset="UTF-8">
+			<title>{% block title %}{% endblock %}</title>
+			<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+			<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+			<link rel="stylesheet" type="text/css" href="css/style.css" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% endblock %}
 	</head>
 	<body>
-	{% block content %}
-		<div id="page-background">
-			<img src="img/main-background.jpg" width="100%" alt="Background Image" />
-		</div>
-	{% endblock content %}
+	<div id="page-background">
+		&nbsp;
+	</div>
+	<div class="innerbox">
+		{% include 'partial/nav.twig' %}
+		<h1>{% block heading %}{% endblock %}</h1>
+		{% block content %}
+		    
+		{% endblock %}
+	</div>
+	
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 	</body>
 </html>
