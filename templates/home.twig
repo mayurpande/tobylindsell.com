@@ -1,0 +1,18 @@
+{% extends 'main.twig' %}
+{% set active_page = 'home' %}
+
+{% block title %}Welcome - Latest News Story{% endblock %}
+
+
+{% block heading %}Latest News Story{% endblock %}
+
+{% block content %}
+	
+	<div id="news-image">
+		<img src="{{ homePage.home_img  }}" alt="News Story Image" />
+	</div>
+	<p>{{ homePage.home_para  }}</p>
+	
+{% endblock %}
+
+ 
