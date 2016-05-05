@@ -55,4 +55,38 @@ img{
 .innerbox #news-image{
 	width:100%;
 	margin: 0 auto;
+}
 
+
+.innerbox #toby-image{
+	margin: 0 auto;
+}
+
+.innerbox #map{
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+}
+
+
+
+
+/* Your styles for the iframe */
+.innerbox #map iframe {
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.innerbox #address{
+	margin: 0 auto;
+}
+
+.innerbox #address p{
+	text-align: center;
+}
