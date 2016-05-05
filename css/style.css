@@ -71,8 +71,9 @@ INNERBOX
  * ABOUT US PAGE (INNERBOX)
  ****************************/
 
-.innerbox #toby-image{
-	margin-left:85px;
+.innerbox #toby-image img{
+	margin: 0 auto;
+	display: block;
 }
 
 
