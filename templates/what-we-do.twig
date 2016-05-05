@@ -1,2 +1,17 @@
 {% extends 'main.twig' %}
 {% set active_page = 'what' %}
+
+{% block title %}What We Do{% endblock %}
+
+
+{% block heading %}What We Do{% endblock %}
+
+{% block content %}
+	
+	<div id="news-image">
+		<img src="{{ whatPage.what_img  }}" alt="What We Do Image" />
+	</div>
+	<p>{{ whatPage.what_para  }}</p>
+	
+{% endblock %}
+
