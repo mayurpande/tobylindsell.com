@@ -1,2 +1,17 @@
 {% extends 'main.twig' %}
 {% set active_page = 'about' %}
+
+
+{% block title %}About Us{% endblock %}
+
+
+{% block heading %}About Us{% endblock %}
+
+{% block content %}
+	
+	<div id="news-image">
+		<img src="{{ aboutUs.about_img  }}" alt="News Story Image" />
+	</div>
+	<p>{{ aboutUs.about_para  }}</p>
+	
+{% endblock %}
