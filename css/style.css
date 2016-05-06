@@ -61,7 +61,19 @@ INNERBOX
 }
 
 #flex-container{
-	display:flex;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	-webkit-box-direction: column;
+
+	display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+	-moz-box-direction: column;
+
+	display: -ms-flexbox; /* TWEENER - IE 10 */
+	-ms-flex-direction: row;
+
+	display: -webkit-flex; /* New - Safari 6.1+. iOS 7.1+, BB10 */
+	-webkit-flex-direction: column;
+
+	display:flex; /* NEW, Spec - Firefox, Chrome, Opera */
 	flex-direction:column;
 }
 
