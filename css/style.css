@@ -60,19 +60,18 @@ INNERBOX
 	padding-right:10px;
 }
 
-#flex-test{
+#flex-container{
 	display:flex;
 	flex-direction:column;
 }
 
-#para p{
+.para p{
 	margin: 0 auto;
 	display: block;
 	padding: 20px 10px;
 }
 
-.innerbox #news-image{
-	width:100%;
+.news-image{
 	margin: 0 auto;
 }
 
