@@ -5,7 +5,7 @@
 	#flex-container{
 		flex-direction: row;
 		flex-wrap:wrap;
-		justify-content: space-between;
+		margin-left:50px;
 	}
 	.news-image{
 		width:40%;
@@ -29,9 +29,9 @@
 	}
 
 	.contact{
-		width:40%;
+		/*width:40%;
 		margin-left:30px;
-		margin-right:30px;
+		margin-right:30px;*/
 		margin-top: -18px;
 		padding-left: 0;
 	}
