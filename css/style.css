@@ -60,6 +60,11 @@ INNERBOX
 	padding-right:10px;
 }
 
+#flex-test{
+	display:flex;
+	flex-direction:column;
+}
+
 #para p{
 	margin: 0 auto;
 	display: block;
