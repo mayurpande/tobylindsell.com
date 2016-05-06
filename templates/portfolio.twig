@@ -9,10 +9,10 @@
 {% block content %}
 	
 	{% for item in portPage %}	
-		<div id="news-image">
+		<div class="news-image">
 			<img src="{{ item.port_img  }}" alt="News Story Image" />
 		</div>
-		<div id="para">
+		<div class="para">
 			<p>{{ item.port_para  }}</p>
 		</div>
 	{% endfor %}
