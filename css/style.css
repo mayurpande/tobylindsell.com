@@ -68,7 +68,7 @@ INNERBOX
 	-moz-box-direction: column;
 
 	display: -ms-flexbox; /* TWEENER - IE 10 */
-	-ms-flex-direction: row;
+	-ms-flex-direction: column;
 
 	display: -webkit-flex; /* New - Safari 6.1+. iOS 7.1+, BB10 */
 	-webkit-flex-direction: column;
