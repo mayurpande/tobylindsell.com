@@ -2,30 +2,26 @@
   /************************
   TWO COLUMN LAYOUT
   ************************/
+	#flex-test{
+		flex-direction: row;
+		flex-wrap:wrap;
+	}
 	.innerbox #news-image{
-		float:left;
 		width:40%;
 		margin: 2.5%;
 	}
-
-	#para{
-		float:right;
+	#para{	
 		width:50%;
 		margin-right:2.5%;
 		margin-top: -10px;	
 	}
-    #para:nth-child(2n){
-		clear:right;
-	}
 	.innerbox #toby-image{
-		float:left;
 		width:50%;
 		margin:2.5%;
 	}
 	
 
 	#test{
-		float:left;
 		width: 45%;
 		margin-left:4.0%;
 	}
@@ -33,7 +29,6 @@
 	.contact{
 		margin-left:0;
 		width:40%;
-		float:right;
 		margin-right:30px;
 		margin-top: -18px;
 		padding-left: 0;
