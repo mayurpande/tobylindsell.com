@@ -24,7 +24,11 @@ img{
   max-width: 100%; 
 }
 
-
+.navbar-brand{
+	margin:0;
+	padding:0;
+	width:20%;
+}
 
 /*****************************
  * PAGE BACKGROUND
