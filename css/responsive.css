@@ -73,13 +73,30 @@
 	 	background-color: rgba(105, 130, 120, 0.87);
 	}
 
+	.innerbox h1{
+		margin-bottom:40px;
+	}
+
 	.navbar-right{
 		margin-right:120px;
+	}
 
+	.para{
+	}
 
+	.news-image{
+		width:30%;
+	}
+	.verticalLine{
+		padding:10px;
+		border-left:1px solid #fff;
+		margin-top:-20px;
+	}
 
-
-
-
+	.horizontalLine{
+		padding:10px;
+		border-top:1px solid #fff;
+		width:95%;
+		margin-left:10px;
 
 }
