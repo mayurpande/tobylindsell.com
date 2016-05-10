@@ -8,10 +8,12 @@
 
 {% block content %}
 	
-	<div id="news-image">
+	<div class="news-image">
 		<img src="{{ homePage.home_img  }}" alt="News Story Image" />
 	</div>
-	<p>{{ homePage.home_para  }}</p>
+	<div class="para">
+		<p>{{ homePage.home_para  }}</p>
+	</div>
 	
 {% endblock %}
 

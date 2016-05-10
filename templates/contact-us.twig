@@ -6,10 +6,9 @@
 {% block heading %}Contact Us{% endblock %}
 
 {% block content %}
-			<div id="map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2485.53522903269!2d-0.19182428482304767!3d51.466689221500815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760f7dc46938ef%3A0xe1111bdc45b14a15!2sThe+Hurlingham+Pub+%26+Kitchen!5e0!3m2!1sen!2suk!4v1462447258314" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>	
+			<div id="map-container">
+				<div id="map"></div>
 			</div>
-			
 			<div class="contact">
 				<h3>Contact Info</h3>
 
@@ -30,5 +29,17 @@
 				</ul>
 			</div>	
 
+<script>
+	function initMap(){
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat :44.540, lng: -78.546},
+			zoom: 8
+		
+		});
 
+
+	}
+
+</script>
 {% endblock %}
