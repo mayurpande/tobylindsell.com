@@ -3,8 +3,23 @@
   TWO COLUMN LAYOUT
   ************************/
 	#flex-container{
-		flex-direction: row;
+
+		-webkit-box-direction: row; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+		/* doesn't support wrap */
+		-webkit-box-lines: multiple;
+
+		-moz-box-direction: row; /* OLD - Firefox 19- (buggy but mostly works) */
+		-moz-box-lines: multiple;
+			
+		-ms-flexbox-direction: row; /* TWEENER - IE 10 */
+		-ms-flex-wrap: wrap
+
+		-webkit-flex-direction: row; /* New Safari 6.1+, iOS 7.1+, BB10 */
+		-webkit-flex-wrap: wrap;
+
+		flex-direction: row; /* NEW, Spec - Firefox, Chrome, Opera */
 		flex-wrap:wrap;
+
 		margin-left:50px;
 	}
 	.news-image{
