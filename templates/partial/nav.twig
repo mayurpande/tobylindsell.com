@@ -4,7 +4,9 @@
 
 		<div class="navbar-header">
 		
-			<a href="" class="navbar-brand">Toby's Website</a>
+			<a href="{{ path_for('home') }}" {% if active_page == 'home' %}class="navbar-brand active"{% endif %}>
+				<img src="../../img/decorum.jpg" alt="Decorum Home Image" />
+			</a>
 			
 			
 			<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -21,8 +23,6 @@
 		<div class="collapse navbar-collapse">
 		
 			<ul class="nav navbar-nav navbar-right">
-				
-				<li{% if active_page == 'home' %} class="active"{% endif %}><a href="{{ path_for('home') }}">Home</a></li>
 			
 				<li{% if active_page == 'portfolio' %} class="active"{% endif %}><a href="{{ path_for('portfolio') }}">Portfolio</a></li>
 				
