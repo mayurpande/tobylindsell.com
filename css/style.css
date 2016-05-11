@@ -24,12 +24,18 @@ img{
   max-width: 100%; 
 }
 
+/****************************
+ * NAVBAR (HEADER)
+ * **************************/
+
 .navbar-brand{
-	margin:0;
+	margin: 5px 0 5px 5px;
 	padding:0;
-	width:25%;
-	margin-top:10px;
-	margin-left:5px;
+}
+
+.img-responsive{
+	width:auto;
+	height:100%;
 }
 
 /*****************************
