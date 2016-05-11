@@ -134,4 +134,26 @@
 		width:auto;
 	}
 
+	.para{
+		margin-top:0;
+	}
+
 }
+
+@media screen and (min-width:1440px){
+	
+	.para{
+		margin-top:6px;
+	}
+
+}
+
+@media screen and (min-width:1660px){
+
+	.para{
+		margin-top:12px;
+	}
+}
+
+
+
