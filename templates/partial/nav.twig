@@ -4,8 +4,13 @@
 
 		<div class="navbar-header">
 		
-			<a href="{{ path_for('home') }}" {% if active_page == 'home' %}class="navbar-brand active"{% endif %}>
-				<img src="../../img/decorum.jpg" alt="Decorum Home Image" />
+			<a href="{{ path_for('home') }}" 
+				{% if active_page == 'home' %}
+					class="navbar-brand active"
+				{% else %}
+					class="navbar-brand"%}
+				{% endif %}>
+					<img src="../../img/decorum.jpg" alt="Decorum Home Image" class="img-responsive" />
 			</a>
 			
 			
