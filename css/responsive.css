@@ -84,8 +84,7 @@
 	}
 
 	.navbar-right{
-		/*margin-right:120px;*/
-		margin-top:-50px;
+		margin-top:7px;
 	}
 
 	.para{
@@ -108,7 +107,6 @@
 	}
 	
 	.container{
-		margin-bottom: 10px;
 		margin-left:5px;
 		width:auto;
 	
