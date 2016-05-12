@@ -6,9 +6,10 @@
 {% block heading %}Contact Us{% endblock %}
 
 {% block content %}
-			<div id="map-container">
+			<div class="news-image">
 				<div id="map"></div>
 			</div>
+			<div class="verticalLine"></div>
 			<div class="contact">
 				<h3>Contact Info</h3>
 
@@ -27,19 +28,39 @@
 					</li>
 
 				</ul>
-			</div>	
+			</div>
+			<div class="horizontalLine"></div>
 
-<script>
-	function initMap(){
-		var mapDiv = document.getElementById('map');
-		var map = new google.maps.Map(mapDiv, {
-			center: {lat :44.540, lng: -78.546},
-			zoom: 8
-		
-		});
+			<script>
+			
+			
 
+			function initMap() {
+				var myLatLang = {lat: 51.46674, lng: -0.18976};
 
-	}
+				var mapDiv = document.getElementById('map');
+				var map = new google.maps.Map(mapDiv, {
+					center: myLatLang,
+					zoom: 17
+				});
 
-</script>
+				var marker = new google.maps.Marker({
+					position: myLatLang,
+					map:map,
+					title: 'Decorum Bulidng Consultancy'
+				});
+
+var center;
+function calculateCenter() {
+  center = map.getCenter();
+}
+google.maps.event.addDomListener(map, 'idle', function() {
+  calculateCenter();
+});
+google.maps.event.addDomListener(window, 'resize', function() {
+  map.setCenter(center);
+});
+
+			}
+			</script>
 {% endblock %}
