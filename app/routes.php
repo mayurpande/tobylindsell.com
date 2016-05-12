@@ -12,4 +12,4 @@ $app->get('/contact-us','ContactUsController:index')->setName('contact');
 
 $app->get('/admin','AuthController:getSignIn')->setName('auth.signin');
 
-$app->get('/admin','AuthController:postSignIn');
+$app->post('/admin','AuthController:postSignIn');
