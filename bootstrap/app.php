@@ -78,7 +78,7 @@ $container['validator'] = function($container){
 
 	return new App\Validation\Validator;
 
-}
+};
 
 //now what we want to do is set up a binding on our container to return this controller then we can
 //attach this to a root
