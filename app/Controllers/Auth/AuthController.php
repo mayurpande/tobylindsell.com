@@ -25,7 +25,7 @@ class AuthController extends Controller{
 		$validation = $this->validator->validate($request, [
 			//for the data provided, for this form input, we want no white space and we don't want
 			//this to be empty, 
-			'email' => v::noWhitespace()->notEmpty(),
+			'email' => v::noWhitespace()->notEmpty()->email(),
 			'name' => v::notEmpty()->alpha(),
 			'password' => v::noWhitespace()->notEmpty(),
 
