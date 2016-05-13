@@ -39,10 +39,17 @@ class Validator{
 				//getMessages because there could be more than one assertion fail
 				$this->errors[$field] = $e->getMessages();
 
-				var_dump($this->errors);
-				die();
+
 			}
 		}
+		
+		return $this;
+	}
+
+	public function failed(){
+		//return if there
+		return !empty($this->search);
+	
 	}
 
 }
