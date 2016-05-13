@@ -18,7 +18,8 @@ class ValidationErrorsMiddleware extends Middleware{
 		 * addGlobal takes two parameter, the first is the name the second is the actual global var in 
 		 * this case its the $_SESSION['errors']
 		 */
-		$this->container->view->getEnvironment()->getEnvironment()->addGlobal('errors',$_SESSION['errors']);	
+		
+		$this->container->view->getEnvironment()->addGlobal('errors',$_SESSION['errors']);	
 		//we unset the session as we no longer need it
 		unset($_SESSION['errors']);
 
