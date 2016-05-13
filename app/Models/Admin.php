@@ -9,6 +9,11 @@ class Admin extends Model{
 
 	protected $table = 'admin';
 
-
+	//specifically tell eloquent what we are writing to
+	protected $fillable = [
+		'email',
+		'name',
+		'password',
+	];
 
 }
