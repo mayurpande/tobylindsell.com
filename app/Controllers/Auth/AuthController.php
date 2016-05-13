@@ -25,9 +25,16 @@ class AuthController extends Controller{
 			//for the data provided, for this form input, we want no white space and we don't want
 			//this to be empty, 
 			'email' => v::noWhitespace()->notEmpty(),
+			'name' => v::notEmpty()->alpha();
 			'password' => v::noWhitespace()->notEmpty(),
 
 		]);		
+
+		$admin = Admin::create([
+			'email' => $request->getParam('email'),
+			'name' => $request->getParam('name'),
+			'password' => password_hash($request->getParam('password'),PASSWORD_DEFAULT),
+		]};
 	
 	}	
 }
