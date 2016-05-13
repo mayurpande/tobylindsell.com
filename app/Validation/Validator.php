@@ -47,8 +47,8 @@ class Validator{
 	}
 
 	public function failed(){
-		//return if there
-		return !empty($this->search);
+		//return/check if the errors are not empty
+		return !empty($this->errors);
 	
 	}
 
