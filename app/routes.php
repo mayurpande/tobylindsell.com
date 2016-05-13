@@ -10,6 +10,6 @@ $app->get('/about-us','AboutUsController:index')->setName('about');
 
 $app->get('/contact-us','ContactUsController:index')->setName('contact');
 
-$app->get('/admin','AuthController:getSignIn')->setName('auth.signin');
+$app->get('/admin','AuthController:getSignUp')->setName('auth.signup');
 
-$app->post('/admin','AuthController:postSignIn');
+$app->post('/admin','AuthController:postSignUp');
