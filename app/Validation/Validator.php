@@ -38,10 +38,13 @@ class Validator{
 				//append to error list see property. we pass in field var here to keep track
 				//getMessages because there could be more than one assertion fail
 				$this->errors[$field] = $e->getMessages();
+				
 
 
 			}
+
 		}
+		
 
 		/* we want to attach our errors that we got from this validation, to all of our views,
 		 * we want to add them as globals. A simple way to do this would be, when we do validate
@@ -52,6 +55,7 @@ class Validator{
 		
 		return $this;
 	}
+	
 
 	public function failed(){
 		//return/check if the errors are not empty
