@@ -113,4 +113,9 @@ $container['AuthController'] = function($container){
 	return new \App\Controllers\Auth\AuthController($container);
 };
 
+//to get the middleware we need to add it into here in our bootstrap/app.php file
+//we choose the middleware. remember as we are extending our base middleware we need to pass our container
+//in
+$app->add(new \App\Middleware\ValidationErrorsMiddleware($container));
+
 require __DIR__ . '/../app/routes.php';
