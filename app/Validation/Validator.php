@@ -42,6 +42,13 @@ class Validator{
 
 			}
 		}
+
+		/* we want to attach our errors that we got from this validation, to all of our views,
+		 * we want to add them as globals. A simple way to do this would be, when we do validate
+		 * we set them into a session here, then inside our middleware we take our session and we set it
+		 * into our views. All we are doing is persisting that data. 
+		 */
+		$_SESSION['errors'] = $this->errors;
 		
 		return $this;
 	}
