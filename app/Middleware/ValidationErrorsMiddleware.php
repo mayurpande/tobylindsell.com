@@ -10,8 +10,22 @@ class ValidationErrorsMiddleware extends Middleware{
 	//it is important that we call the next middleware because it needs to cycle through from the outside
 	//of our application much like an onion into the core.
 	public function __invoke($request,$response,$next){
+		
+		//before state has changed
+		/* over here we take errors from session validator
+		 * and then place errors into our views
+		 *
+		 * addGlobal takes two parameter, the first is the name the second is the actual global var in 
+		 * this case its the $_SESSION['errors']
+		 */
+		$this->container->view->getEnvironment()->getEnvironment()->addGlobal('errors',$_SESSION['errors']);	
+		//we unset the session as we no longer need it
+		unset($_SESSION['errors']);
 
-		var_dump('middleware');
+		//after state has changed
+		$response = $next($request,$response);
+
+		return $response;
 	}
 	
 
