@@ -7,6 +7,10 @@ use Respect\Validation\Validator as Respect;
 //used for error checking see try catch block below
 use Respect\Validation\Exceptions\NestedValidationException;
 
+
+if(isset($_SESSION['errors'])){
+	session_start();
+}
 class Validator{
 
 	protected $errors;
@@ -51,8 +55,9 @@ class Validator{
 		 * we set them into a session here, then inside our middleware we take our session and we set it
 		 * into our views. All we are doing is persisting that data. 
 		 */
+
 		$_SESSION['errors'] = $this->errors;
-		
+
 		return $this;
 	}
 	
