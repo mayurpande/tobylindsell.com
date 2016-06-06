@@ -15,6 +15,10 @@ class WhatWeDoController extends Controller{
 	 //now we can use this view object and render the views
 	//we now have access to our whole container because we have the container in our base controller 
 		$what_page = What_We_Do::where('id',1)->first();
-		return $this->view->render($response, 'what-we-do.twig',array('whatPage' => $what_page));
+		$what_info = What_We_Do_Info::all();
+		foreach($what_info as $item){
+			$id = $item->item;
+		}
+		return $this->view->render($response, 'what-we-do.twig',array('whatPage' => $what_page, 'id' => $id, 'info' => $what_info));
 	}
 }
