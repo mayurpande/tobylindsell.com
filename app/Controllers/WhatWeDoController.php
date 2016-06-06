@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 //import model name
 use App\Models\What_We_Do;
-
+use App\Models\What_We_Do_Info;
 //necessary because we are passing slim views instance
 use Slim\Views\Twig as View;
 
@@ -17,8 +17,8 @@ class WhatWeDoController extends Controller{
 		$what_page = What_We_Do::where('id',1)->first();
 		$what_info = What_We_Do_Info::all();
 		foreach($what_info as $item){
-			$id = $item->item;
+			$i = $item->item;
 		}
-		return $this->view->render($response, 'what-we-do.twig',array('whatPage' => $what_page, 'id' => $id, 'info' => $what_info));
+		return $this->view->render($response, 'what-we-do.twig',array('whatPage' => $what_page, 'i' => $id, 'info' => $what_info));
 	}
 }
