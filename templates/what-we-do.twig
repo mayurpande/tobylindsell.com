@@ -12,27 +12,28 @@
 		<img src="{{ whatPage.what_img  }}" alt="What We Do Image" />
 	</div>
 	<div class="verticalLine"></div>
-	{% for i in info %}
+
 	<div class="para">
+		{% for i in info %}	
+			<div class="what-info">
+				<h2>{{ i.heading }}</h2>
+				<p>{{ i.para1 }}</p>
+				<p>{{ i.para2 }}</p>
+
+					{% if i.sub_heading %}			
+						<h3>{{ i.sub_heading }}</h3>
+						<p>{{ i.sub_para }}</p>
+					{% endif %}
 		
-			<h2>{{ i.heading }}</h2>
-			<p>{{ i.para1 }}</p>
-			<p>{{ i.para2 }}</p>
-
-				{% if i.sub_heading is not null %}			
-				<h3>{{ i.sub_heading }}</h3>
-				<p>{{ i.sub_para }}</p>
-				{% endif %}
-	
-				{% if i.sub_heading2 is defined %}	
-				<h3>{{ i.sub_heading2 }}</h3>
-				<p>{{ i.sub_para2 }}</p>
-				{% endif %}
-
-
+					{% if i.sub_heading2 %}	
+						<h3>{{ i.sub_heading2 }}</h3>
+						<p>{{ i.sub_para2 }}</p>
+					{% endif %}
+			</div>
+		{% endfor %}
 		
 	</div>
-{% endfor %}
+
 
 	<div class="horizontalLine"></div>
 	

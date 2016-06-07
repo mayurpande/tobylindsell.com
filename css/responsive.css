@@ -12,7 +12,7 @@
 		-moz-box-lines: multiple;
 			
 		-ms-flexbox-direction: row; /* TWEENER - IE 10 */
-		-ms-flex-wrap: wrap
+		-ms-flex-wrap: wrap;
 
 		-webkit-flex-direction: row; /* New Safari 6.1+, iOS 7.1+, BB10 */
 		-webkit-flex-wrap: wrap;
