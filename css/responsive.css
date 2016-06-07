@@ -88,6 +88,7 @@
 	}
 
 	.para{
+		margin-top:4px;
 	}
 
 	.news-image{
@@ -143,7 +144,7 @@
 	}
 
 	.para{
-		margin-top:0;
+		margin-top:4px;
 	}
 
 }
@@ -155,7 +156,7 @@
 	}
 
 	.contact{
-		margin-top:10px;
+		margin-top:6px;
 	}
 
 }
@@ -163,12 +164,18 @@
 @media screen and (min-width:1660px){
 
 	.para{
-		margin-top:12px;
+		margin-top:15px;
 	}
 
 	.contact{
 		margin-top: 20px;
 	}
+
+	.what-info p{
+		padding:10px 0;
+	}
+
+
 }
 
 
