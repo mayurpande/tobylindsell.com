@@ -43,9 +43,9 @@ img{
  ****************************/
 
 #page-background{
-  	background: linear-gradient(#fff,transparent 20%),
-		linear-gradient(0deg, #fff,transparent),
-        #fff url('../img/main-background.jpg') no-repeat center;
+  	background: linear-gradient(#2c363d,transparent 100%),
+		linear-gradient(0deg, #2c363d,transparent),
+        #2c363d url('../img/main-background.jpg') no-repeat center;
   	background-size: cover;
 	position:fixed;
 	top:0;
