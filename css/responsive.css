@@ -91,6 +91,9 @@
 		margin-top:4px;
 	}
 
+	.what-info h2,h3{
+		margin-top:0;
+	}
 	.news-image{
 		width:30%;
 	}
