@@ -100,6 +100,9 @@ INNERBOX
 }
 .what-info h2,h3{
 	font-weight:bold;
+	
+	padding:10px 0 0 10px;
+	margin-bottom:0;
 }
 .news-image{
 	margin: 0 auto;
