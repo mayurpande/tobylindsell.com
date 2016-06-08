@@ -91,8 +91,13 @@
 		margin-top:4px;
 	}
 
+	.para p{
+		padding:5px 0 20px 0;
+	}
+
 	.what-info h2,h3{
-		margin-top:0;
+		margin-top:8px;
+		padding: 0 0 10px 0;
 	}
 	.news-image{
 		width:30%;
@@ -137,9 +142,12 @@
 	}
 
 	.what-info h2,h3{
-		margin-top:5px;
-	}
+		margin-top:15px;
 
+	}
+	.para p{
+		padding:10px 0 20px 0;
+	}
 }
 
 @media screen and (min-width:1200px){
@@ -153,7 +161,11 @@
 	}
 
 	.what-info h2,h3{
-		margin-top:9px;
+		margin-top:20px;
+	}
+
+	.para p{
+		padding:15px 0 20px 0;
 	}
 
 }
@@ -169,7 +181,10 @@
 	}
 
 	.what-info h2,h3{
-		margin-top:14px;
+		margin-top:23px;
+	}
+	.para p{
+		padding:18px 0 20px 0;
 	}
 
 }
@@ -183,6 +198,7 @@
 	.contact{
 		margin-top: 20px;
 	}
+	
 
 	
 
