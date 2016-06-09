@@ -12,7 +12,7 @@ class AuthController extends Controller{
 
 	//fn to render login page for admin
 	public function getSignUp($request,$response){
-		
+
 		return $this->view->render($response, 'auth/admin-signup.twig');
 	
 	}
