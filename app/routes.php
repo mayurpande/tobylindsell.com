@@ -18,4 +18,4 @@ $app->get('/admin','AuthController:getSignIn')->setName('auth.signin');
 
 $app->post('/admin','AuthController:postSignIn');
 
-
+$app->get('/admin-update-site','AdminController:getUpdateSite')->setName('admin.update');
