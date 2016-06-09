@@ -117,6 +117,10 @@ $container['csrf'] = function($container){
 	return new \Slim\Csrf\Guard;
 };
 
+$container['Auth'] = function($container){
+	return new \App\Auth\Auth;
+};
+
 //to get the middleware we need to add it into here in our bootstrap/app.php file
 //we choose the middleware. remember as we are extending our base middleware we need to pass our container
 //in
