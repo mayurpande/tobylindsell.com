@@ -108,6 +108,10 @@ INNERBOX
 	width:100%;
 }
 
+.row{
+	margin:0 auto;
+	width:80%;
+}
 /*****************************
  * ABOUT US PAGE (INNERBOX)
  ****************************/
