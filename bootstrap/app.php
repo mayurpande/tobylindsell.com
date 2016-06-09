@@ -60,6 +60,12 @@ $container['db'] = function($container) use ($capsule){
 	return $capsule;
 };
 
+$container['auth'] = function($container){
+	return new \App\Auth\Auth;
+};
+
+
+
 // Register component on container
 $container['view'] = function ($container) {
 	$view = new \Slim\Views\Twig(__DIR__ . '/../templates', [
@@ -68,7 +74,9 @@ $container['view'] = function ($container) {
     $view->addExtension(new \Slim\Views\TwigExtension(
         $container['router'],
         $container['request']->getUri()
-    ));
+	));
+
+	$view->getEnvironment()->getGlobal('auth',$container->auth);
 
     return $view;
 };
@@ -115,10 +123,6 @@ $container['AuthController'] = function($container){
 
 $container['csrf'] = function($container){
 	return new \Slim\Csrf\Guard;
-};
-
-$container['auth'] = function($container){
-	return new \App\Auth\Auth;
 };
 
 $container['AdminController'] = function($container){
