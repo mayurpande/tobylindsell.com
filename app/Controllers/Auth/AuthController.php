@@ -23,7 +23,11 @@ class AuthController extends Controller{
 			$request->getParam('password')
 		);
 		
-		var_dump($auth);
+		if(!auth){
+			return $response->withRedirect($this->router->pathFor('auth.signin'));
+		}
+
+		return $this->view->render($response, 'auth/admin.twig');
 
 	}
 
