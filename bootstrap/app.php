@@ -117,7 +117,7 @@ $container['csrf'] = function($container){
 	return new \Slim\Csrf\Guard;
 };
 
-$container['Auth'] = function($container){
+$container['auth'] = function($container){
 	return new \App\Auth\Auth;
 };
 
