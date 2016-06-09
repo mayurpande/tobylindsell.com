@@ -37,8 +37,10 @@
 				
 				<li{% if active_page == 'contact' %} class="active"{% endif %}><a href="{{ path_for('contact') }}">Contact Us</a></li>
 				
-				<li{% if active_page == 'admin' %} class="active"{% endif %}><a href="{{ path_for('admin.update') }}">Admin</a></li>
+				{% if auth.check %}
+					<li{% if active_page == 'admin' %} class="active"{% endif %}><a href="{{ path_for('admin.update') }}">Admin</a></li>
 
+				{% endif %}
 			</ul>
 		
 		</div>
