@@ -2,7 +2,7 @@
 
 namespace App\Auth;
 
-use App\Models\User;
+use App\Models\Admin;
 
 class Auth{
 
