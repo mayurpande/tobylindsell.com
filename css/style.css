@@ -15,9 +15,11 @@ body{
 	
 }
 
-
+p{
+	font-size:1.2em;
+}
 a {
-   text-decoration: none;
+   text-decoration:none;
 }
 
 img{
@@ -43,9 +45,9 @@ img{
  ****************************/
 
 #page-background{
-  	background: linear-gradient(#fff,transparent 20%),
-		linear-gradient(0deg, #fff,transparent),
-        #fff url('../img/main-background.jpg') no-repeat center;
+  	background: linear-gradient(#2c363d,transparent 100%),
+		linear-gradient(0deg, #2c363d,transparent),
+        #2c363d url('../img/main-background.jpg') no-repeat center;
   	background-size: cover;
 	position:fixed;
 	top:0;
@@ -95,6 +97,12 @@ INNERBOX
 	padding: 20px 10px;
 }
 
+.what-info h2,h3{
+	font-weight:bold;
+	
+	padding:10px 0 0 10px;
+	margin-bottom:0;
+}
 .news-image{
 	margin: 0 auto;
 	width:100%;
@@ -122,10 +130,13 @@ INNERBOX
 }
 
 .contact{
-	margin: 0 auto;
-	padding-left:100px;
+	padding:20px;
 }
 
+.contact h2{
+	margin-bottom: 0.83em;
+	padding:0;
+}
 .contact-info{
 	list-style: none;
 	padding:0;
@@ -137,21 +148,24 @@ INNERBOX
 	display:block;
 	min-height: 20px;
 	background-repeat: no-repeat;
-	background-size: 16px 16px;
-	padding: 0 0 0 30px;
+	background-size: 23px 23px;
+	padding: 0 0 0 40px;
 	margin: 0 0 10px;
 }
 
 .contact-info li.phone a {
 	background-image: url('../img/phone-46-16.png');
+	font-size:1.5em;
 }
 
 .contact-info li.email a {
 	background-image: url('../img/email-16.png');
+	font-size:1.5em;
 }
 
 .contact-info li.address a {
 	background-image: url('../img/home-4-16.png');
+	font-size:1.2em;
 }
 
 .contact-info li.address p{
@@ -163,9 +177,12 @@ INNERBOX
 /********************************
  * COLOURS
  * *****************************/
+body{
+	color: #fff;
+}
 
 a{
-	color: #6ab47b;
+	color: #fff;
 }
 
 a:hover{
