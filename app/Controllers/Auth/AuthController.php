@@ -27,7 +27,7 @@ class AuthController extends Controller{
 			return $response->withRedirect($this->router->pathFor('auth.signin'));
 		}
 
-		return $this->view->render($response, 'auth/admin.twig');
+		return $this->view->render($response, 'admin.twig');
 
 	}
 
