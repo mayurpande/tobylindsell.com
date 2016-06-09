@@ -6,6 +6,10 @@ use App\Models\Admin;
 
 class Auth{
 
+	public function check(){
+		return isset($_SESSION['user']);
+	}
+
 	public function attempt($email,$password){
 		
 		//grab user by email
