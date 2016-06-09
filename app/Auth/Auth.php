@@ -10,7 +10,7 @@ class Auth{
 		
 		//grab user by email
 
-		$user = User::where('email',$email)->first();
+		$user = Admin::where('email',$email)->first();
 		
 		//if !user return false
 		if(!$user){
