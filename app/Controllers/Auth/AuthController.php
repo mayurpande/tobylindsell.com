@@ -15,22 +15,15 @@ class AuthController extends Controller{
 	}
 
 	public function postSignIn($request,$response){
-		//here we use the validation object. here we also have an array of rules
-		//in this case email and password need to be available, 
-		$validation = $this->validator->validate($request, [
-			//for the data provided, for this form input, we want no white space and we don't want
-			//this to be empty, 
-			'email' => v::noWhitespace()->notEmpty()->email(),
-			'password' => v::noWhitespace()->notEmpty(),
+		
+		$auth = $this->auth->attempt(
 
-		]);		
-
-		if($validation->failed()){
-			//if the validation failed redirect to signup page
-			return $response->withRedirect($this->router->pathFor('auth.signin'));
-		}
-
-
+			$request->getParam('email'),
+			
+			$request->getParam('password')
+		);
+		
+		var_dump($auth);
 
 	}
 
