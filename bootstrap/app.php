@@ -113,6 +113,10 @@ $container['AuthController'] = function($container){
 	return new \App\Controllers\Auth\AuthController($container);
 };
 
+$container['csrf'] = function($container){
+	return new \Slim\Csrf\Guard;
+};
+
 //to get the middleware we need to add it into here in our bootstrap/app.php file
 //we choose the middleware. remember as we are extending our base middleware we need to pass our container
 //in
@@ -120,5 +124,9 @@ $app->add(new \App\Middleware\ValidationErrorsMiddleware($container));
 
 $app->add(new \App\Middleware\OldInputMiddleware($container));
 
+//csrf turned on
+$app->add($container->csrf);
+
+v::with('App\\Validation\\Rules\\');
 
 require __DIR__ . '/../app/routes.php';
