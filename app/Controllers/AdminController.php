@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\Portfolio;
+use App\Models\Port_Page;
 use App\Controllers\Controller;
 
 //import validator
@@ -21,7 +21,7 @@ class AdminController extends Controller{
 	public function postPortUpdate($request,$response){
 		
 
-		$portfolio = Portfolio::where("id","1");
+		$portfolio = Port_Page::where("id","1");
 		$new_port_data = array(
 			'portImg' => $request->getParam('portImg'),
 			'portPara' => $request->getParam('portPara'),
