@@ -1,0 +1,98 @@
+{% extends 'main.twig' %}
+
+{% block title %}Admin - Update Content{% endblock %}
+
+
+{% block heading %}Update What We Do Info{% endblock %}
+
+{% block admin %}
+	
+	<div class="row">
+		
+		<div class=".col-md-6 col-md-offset-3 for">
+
+			<div class="panel panel-default">
+				
+				<div class="panel-heading">What We do Info Part 3</div>
+
+				<div class="panel-body">
+					
+					<form action="{{ path_for('adminWhat3.update') }}" method="post" autcomplete="off">
+						
+						<div class="form-group{{ errors.email ? ' has-error' : '' }}">
+							
+							<label for="heading">Heading Part 3</label>
+
+							<input type"text" name="heading" id="heading" class="form-control" >
+
+
+						</div>
+					
+						<div class="form-group{{ errors.password ? ' has-error' : '' }}">
+											
+							<label for="para1">Paragraph 1 Part 3</label>
+
+							<input type="text" name="para1" id="para1" class="form-control">
+
+							
+						</div>
+
+						<div class="form-group">
+											
+							<label for="para2">Paragraph 2 Part 3</label>
+
+							<input type="text" name="para2" id="para2" class="form-control">
+
+						</div>
+
+						<div class="form-group">
+											
+							<label for="sub_heading">Sub Heading Part 3</label>
+
+							<input type="text" name="sub_heading" id="sub_heading" class="form-control">
+
+						</div>
+
+                       	<div class="form-group">
+											
+							<label for="sub_para">Sub Paragraph Part 3</label>
+
+							<input type="text" name="sub_para" id="sub_para" class="form-control">
+
+						</div>
+
+
+                       	<div class="form-group">
+											
+							<label for="sub_heading2">Sub Heading 2 Part 3</label>
+
+							<input type="text" name="sub_heading2" id="sub_heading2" class="form-control">
+
+						</div>	
+						
+						<div class="form-group">
+											
+							<label for="sub_para2">Sub Paragraph 2 Part 3</label>
+
+							<input type="text" name="sub_para2" id="sub_para2" class="form-control">
+
+						</div>
+
+
+						<button type="submit" class="btn btn-default">Update What We Do Info Part 3</button>
+
+						{{ csrf.field | raw }}
+						
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	
+	
+{% endblock %}
+
