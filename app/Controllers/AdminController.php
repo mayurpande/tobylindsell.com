@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Home_Page;
+use App\Models\What_We_Do_Info;
 use App\Models\Port_Page;
 use App\Controllers\Controller;
 
@@ -62,6 +63,25 @@ class AdminController extends Controller{
 		$new_port_data = array(
 			'home_img' => $request->getParam('home_img'),
 			'home_para' => $request->getParam('home_para')
+		);
+		$portfolio->fill($new_port_data);
+		$portfolio->save();
+
+		return $response->withRedirect($this->router->pathFor('admin.update'));
+	}
+
+	public function getWhat1Update($request,$response){
+		return $this->view->render($response,'admin-what-1.twig');
+	}
+
+	public function postWhat1Update($request,$response){
+		
+
+		$portfolio = What_We_Do_Info::where("id","1")->first();
+		$new_port_data = array(
+			'heading' => $request->getParam('heading'),
+			'para1' => $request->getParam('para1'),
+			'para2' => $request->getParam('para2')
 		);
 		$portfolio->fill($new_port_data);
 		$portfolio->save();
