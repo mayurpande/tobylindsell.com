@@ -89,6 +89,65 @@ class AdminController extends Controller{
 		return $response->withRedirect($this->router->pathFor('admin.update'));
 	}
 
+	public function getWhat2Update($request,$response){
+		return $this->view->render($response,'admin-what-2.twig');
+	}
+
+	public function postWhat2Update($request,$response){
+		
+
+		$portfolio = What_We_Do_Info::where("id","2")->first();
+		$new_port_data = array(
+			'heading' => $request->getParam('heading'),
+			'para1' => $request->getParam('para1'),
+			'para2' => $request->getParam('para2')
+		);
+		$portfolio->fill($new_port_data);
+		$portfolio->save();
+
+		return $response->withRedirect($this->router->pathFor('admin.update'));
+	}
+
+	public function getWhat3Update($request,$response){
+		return $this->view->render($response,'admin-what-3.twig');
+	}
+
+	public function postWhat3Update($request,$response){
+		
+
+		$portfolio = What_We_Do_Info::where("id","3")->first();
+		$new_port_data = array(
+			'heading' => $request->getParam('heading'),
+			'para1' => $request->getParam('para1'),
+			'para2' => $request->getParam('para2'),
+			'sub_heading' => $request->getParam('sub_heading'),
+			'sub_para' => $request->getParam('sub_para'),
+			'sub_heading2' => $request->getParam('sub_heading2')
+		);
+		$portfolio->fill($new_port_data);
+		$portfolio->save();
+
+		return $response->withRedirect($this->router->pathFor('admin.update'));
+	}
+
+
+public function getWhat4Update($request,$response){
+		return $this->view->render($response,'admin-what-4.twig');
+	}
+
+	public function postWhat4Update($request,$response){
+		
+
+		$portfolio = What_We_Do_Info::where("id","4")->first();
+		$new_port_data = array(
+			'heading' => $request->getParam('heading'),
+			'para1' => $request->getParam('para1')
+		);
+		$portfolio->fill($new_port_data);
+		$portfolio->save();
+
+		return $response->withRedirect($this->router->pathFor('admin.update'));
+	}
 
 }
 
