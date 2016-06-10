@@ -37,7 +37,7 @@ class AuthController extends Controller{
 			return $response->withRedirect($this->router->pathFor('auth.signin'));
 		}
 
-		return $response->withRedirect($this->router->pathFor('home'));
+		return $response->withRedirect($this->router->pathFor('admin.update'));
 
 	}
 
