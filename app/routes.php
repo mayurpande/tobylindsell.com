@@ -22,6 +22,10 @@ $app->get('/signout','AuthController:getSignOut')->setName('auth.signout');
 
 $app->get('/admin-update-site','AdminController:getUpdateSite')->setName('admin.update');
 
-$app->get('/admin-update-portfolio','AdminController:getPortUpdate')->setName('adminPort.update');
+$app->get('/admin-update-portfolio-1','AdminController:getPort1Update')->setName('adminPort.update');
 
-$app->post('/admin-update-portfolio','AdminController:postPortUpdate');
+$app->post('/admin-update-portfolio-1','AdminController:postPort1Update');
+
+$app->get('/admin-update-portfolio-2','AdminController:getPort2Update')->setName('adminPort2.update');
+
+$app->post('/admin-update-portfolio-2','AdminController:postPort2Update');
