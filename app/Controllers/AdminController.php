@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Home_Page;
 use App\Models\Port_Page;
 use App\Controllers\Controller;
 
@@ -57,7 +58,7 @@ class AdminController extends Controller{
 	public function postNewsUpdate($request,$response){
 		
 
-		$portfolio = Port_Page::where("id","1")->first();
+		$portfolio = Home_Page::where("id","1")->first();
 		$new_port_data = array(
 			'home_img' => $request->getParam('home_img'),
 			'home_para' => $request->getParam('home_para')
