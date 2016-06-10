@@ -108,10 +108,25 @@ INNERBOX
 	width:100%;
 }
 
+
+
+/****************************
+ * ADMIN PAGE (INNERBOX)
+ * ************************/
+
+
 .row{
 	margin:0 auto;
 	width:80%;
 }
+
+
+#admin-info{
+	margin:0 auto;
+	padding:0 10px;
+}
+
+
 /*****************************
  * ABOUT US PAGE (INNERBOX)
  ****************************/
