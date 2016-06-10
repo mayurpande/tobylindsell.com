@@ -14,7 +14,7 @@ class Port_Page extends Model{
 	//with the plural version. If your table differs we can explicitly name it like below
 	protected $table = 'porfolio';
 	
-	protect $fillable = [
+	protected $fillable = [
 		'port_img',
 		'port_para',
 	];
