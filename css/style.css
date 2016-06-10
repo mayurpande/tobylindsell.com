@@ -203,7 +203,9 @@ body{
 a{
 	color: #fff;
 }
-
+label{
+	color:#222;
+}
 a:hover{
 	color: #E81AB4;
 }
