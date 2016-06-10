@@ -13,6 +13,10 @@ class Port_Page extends Model{
 	//eloquent takes the singular version of the class name and it will automatically look for a table
 	//with the plural version. If your table differs we can explicitly name it like below
 	protected $table = 'porfolio';
-
+	
+	protect $fillable = [
+		'port_img',
+		'port_para',
+	];
 
 }
