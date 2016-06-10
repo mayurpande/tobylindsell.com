@@ -14,11 +14,11 @@ class AdminController extends Controller{
 		return $this->view->render($response,'admin.twig');
 	}
 
-	public function getPortUpdate($request,$response){
+	public function getPort1Update($request,$response){
 		return $this->view->render($response,'admin-portfolio.twig');
 	}
 
-	public function postPortUpdate($request,$response){
+	public function postPort1Update($request,$response){
 		
 
 		$portfolio = Port_Page::where("id","1")->first();
