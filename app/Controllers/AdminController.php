@@ -33,7 +33,7 @@ class AdminController extends Controller{
 	}
 
 	public function getPort2Update($request,$response){
-		return $this->view->render($response,'admin-portfolio.twig');
+		return $this->view->render($response,'admin-portfolio2.twig');
 	}
 
 	public function postPort2Update($request,$response){
