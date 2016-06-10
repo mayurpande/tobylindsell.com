@@ -50,6 +50,24 @@ class AdminController extends Controller{
 		return $response->withRedirect($this->router->pathFor('admin.update'));
 	}
 
+	public function getNewsUpdate($request,$response){
+		return $this->view->render($response,'admin-news.twig');
+	}
+
+	public function postNewsUpdate($request,$response){
+		
+
+		$portfolio = Port_Page::where("id","1")->first();
+		$new_port_data = array(
+			'home_img' => $request->getParam('home_img'),
+			'home_para' => $request->getParam('home_para')
+		);
+		$portfolio->fill($new_port_data);
+		$portfolio->save();
+
+		return $response->withRedirect($this->router->pathFor('admin.update'));
+	}
+
 
 }
 
