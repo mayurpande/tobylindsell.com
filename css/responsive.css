@@ -78,6 +78,11 @@
 		width:70%;
 	}
 
+	/*admin-info page*/
+	#admin-info{
+		width:60%;
+	}
+
 }
 
 @media screen and (min-width:525px){
@@ -214,6 +219,10 @@
 	.for.col-md-offset-3{
 		margin-left:0;
 	}
+
+	#admin-info{
+		width:50%;
+	}
 }
 
 @media screen and (min-width:1200px){
@@ -259,7 +268,9 @@
 	.row{
 		width:25%;
 	}
-
+	#admin-info{
+		width:45%;
+	}
 }
 
 @media screen and (min-width:1660px){
@@ -274,6 +285,10 @@
 	
 	.row{
 		width:20%;
+	}
+
+	#admin-info{
+		width:40%;
 	}
 }
 
