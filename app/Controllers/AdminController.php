@@ -32,6 +32,25 @@ class AdminController extends Controller{
 		return $response->withRedirect($this->router->pathFor('admin.update'));
 	}
 
+	public function getPort2Update($request,$response){
+		return $this->view->render($response,'admin-portfolio.twig');
+	}
+
+	public function postPort2Update($request,$response){
+		
+
+		$portfolio = Port_Page::where("id","2")->first();
+		$new_port_data = array(
+			'port_img' => $request->getParam('port_img'),
+			'port_para' => $request->getParam('port_para')
+		);
+		$portfolio->fill($new_port_data);
+		$portfolio->save();
+
+		return $response->withRedirect($this->router->pathFor('admin.update'));
+	}
+
+
 }
 
 
