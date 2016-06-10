@@ -14,5 +14,13 @@ class What_We_Do_Info extends Model{
 	//with the plural version. If your table differs we can explicitly name it like below
 	protected $table = 'what_page_info';
 
-
+	protected $fillable = [
+		'heading',
+		'para1',
+		'para2',
+		'sub_heading',
+		'sub_para',
+		'sub_heading2',
+		'sub_para2',
+	];
 }
