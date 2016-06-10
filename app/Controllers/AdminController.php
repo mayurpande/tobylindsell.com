@@ -24,9 +24,9 @@ class AdminController extends Controller{
 		$portfolio = Port_Page::where("id","1");
 		$new_port_data = array(
 			'portImg' => $request->getParam('portImg'),
-			'portPara' => $request->getParam('portPara'),
+			'portPara' => $request->getParam('portPara')
 		);
-		$portfolio->fill($new_port_data));
+		$portfolio->fill($new_port_data);
 		$portfolio->save();
 
 		return $response->withRedirect($this->router->pathFor('admin.update'));
