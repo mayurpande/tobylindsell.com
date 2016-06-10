@@ -33,3 +33,7 @@ $app->post('/admin-update-portfolio-2','AdminController:postPort2Update');
 $app->get('/admin-update-news','AdminController:getNewsUpdate')->setName('adminNews.update');
 
 $app->post('/admin-update-news','AdminController:postNewsUpdate');
+
+$app->get('/admin-update-what-info-1','AdminController:getWhat1Update')->setName('adminWhat1.update');
+
+$app->post('/admin-update-what-info-1','AdminController:postWhat1Update');
