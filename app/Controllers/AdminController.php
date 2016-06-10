@@ -21,7 +21,7 @@ class AdminController extends Controller{
 	public function postPortUpdate($request,$response){
 		
 
-		$portfolio = Port_Page::where("id","1");
+		$portfolio = Port_Page::where("id","1")->first();
 		$new_port_data = array(
 			'port_img' => $request->getParam('port_img'),
 			'port_para' => $request->getParam('port_Para')
