@@ -24,7 +24,7 @@ class AdminController extends Controller{
 		$portfolio = Port_Page::where("id","1")->first();
 		$new_port_data = array(
 			'port_img' => $request->getParam('port_img'),
-			'port_para' => $request->getParam('port_Para')
+			'port_para' => $request->getParam('port_para')
 		);
 		$portfolio->fill($new_port_data);
 		$portfolio->save();
