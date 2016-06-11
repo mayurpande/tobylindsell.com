@@ -122,7 +122,8 @@ class AdminController extends Controller{
 			'para2' => $request->getParam('para2'),
 			'sub_heading' => $request->getParam('sub_heading'),
 			'sub_para' => $request->getParam('sub_para'),
-			'sub_heading2' => $request->getParam('sub_heading2')
+			'sub_heading2' => $request->getParam('sub_heading2'),
+			'sub_para2' => $request->getParam('sub_para2')
 		);
 		$portfolio->fill($new_port_data);
 		$portfolio->save();
