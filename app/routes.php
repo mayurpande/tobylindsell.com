@@ -49,3 +49,9 @@ $app->post('/admin-update-what-info-3','AdminController:postWhat3Update');
 $app->get('/admin-update-what-info-4','AdminController:getWhat4Update')->setName('adminWhat4.update');
 
 $app->post('/admin-update-what-info-4','AdminController:postWhat4Update');
+
+$app->get('/admin-password-change','PasswordController:getChangePassword')->setName('auth.password.change');
+
+$app->post('/admin-password-change','PasswordController:postChangePassword');
+
+
