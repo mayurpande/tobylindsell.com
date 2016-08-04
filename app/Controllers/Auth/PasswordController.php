@@ -34,7 +34,7 @@ class PasswordController extends Controller
         
         }
 
-        die('change password');
+        $this->auth->user()->setPassword();
 		
 	}
 }	
