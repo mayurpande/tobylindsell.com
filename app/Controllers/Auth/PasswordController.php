@@ -41,7 +41,7 @@ class PasswordController extends Controller
         
 
         //redirect the user
-        return $response->withRedirect($this->router->pathFor('home'));
+        return $response->withRedirect($this->router->pathFor('admin.update'));
 		
 	}
 }	
