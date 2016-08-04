@@ -68,7 +68,7 @@ $container['auth'] = function($container){
 //add slim flash to container
 $container['flash'] = function ($container) {
 
-    return new \App\Auth\Auth;
+    return new \Slim\Flash\Messages;
 
 };
 
