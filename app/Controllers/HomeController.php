@@ -15,8 +15,7 @@ class HomeController extends Controller{
 	 //now we can use this view object and render the views
 	//we now have access to our whole container because we have the container in our base controller 
         $home_page = Home_Page::where('id',1)->first();
-        $this->flash->addMessage('global','Test flash message');
-		return $this->view->render($response, 'home.twig', array('homePage' => $home_page));
+        return $this->view->render($response, 'home.twig', array('homePage' => $home_page));
 	}
 }
 
