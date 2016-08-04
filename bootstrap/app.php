@@ -147,6 +147,10 @@ $container['AdminController'] = function($container){
 	return new \App\Controllers\AdminController($container);
 };
 
+$container['ImageController'] = function($container){
+	return new \App\Controllers\ImageController($container);
+};
+
 //to get the middleware we need to add it into here in our bootstrap/app.php file
 //we choose the middleware. remember as we are extending our base middleware we need to pass our container
 //in
