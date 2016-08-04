@@ -65,6 +65,13 @@ $container['auth'] = function($container){
 };
 
 
+//add slim flash to container
+$container['flash'] = function ($container) {
+
+    return new \App\Auth\Auth;
+
+}
+
 
 // Register component on container
 $container['view'] = function ($container) {
