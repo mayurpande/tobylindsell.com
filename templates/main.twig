@@ -19,6 +19,7 @@
 	
 	<div class="innerbox">
 		{% include 'partial/nav.twig' %}
+        {% include 'partial/flash.twig' %}
 		<h1>{% block heading %}{% endblock %}</h1>
 		{% block admin %}{% endblock %}
 		<div id="flex-container">
