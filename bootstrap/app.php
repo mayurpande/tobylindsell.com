@@ -85,8 +85,11 @@ $container['view'] = function ($container) {
 
 	$view->getEnvironment()->addGlobal('auth', [
 		
-		'check' => $container->auth->check()
-	]);
+        'check' => $container->auth->check(),
+        'user' => $container->auth->user(),
+    ]);
+
+    $view->getEnvironment()->addGlobal('flash',$container->flash);
 
     return $view;
 };
