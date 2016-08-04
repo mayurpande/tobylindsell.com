@@ -34,7 +34,14 @@ class PasswordController extends Controller
         
         }
 
-        $this->auth->user()->setPassword();
+        $this->auth->user()->setPassword($request->getParam('password'));
+
+        //flash a message
+        $this->flash->addMessage('info','Your password has been reset.');
+        
+
+        //redirect the user
+        return $response->withRedirect($this->router->pathFor('home'));
 		
 	}
 }	
