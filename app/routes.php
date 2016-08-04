@@ -72,7 +72,9 @@ $app->group('', function () {
 
     $this->post('/admin-password-change','PasswordController:postChangePassword');
 
+    $this->get('/admin-upload-image','ImageController:getImageUpload')->setName('adminUpload.update');
 
+    $this->post('admin-upload-image','ImageController:postImageUpload');
 
 })->add(new AuthMiddleware($container));
 
