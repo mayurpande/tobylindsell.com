@@ -22,7 +22,7 @@ class PasswordController extends Controller
 
         $validation = $this->validator->validate($request, [
 
-            'password_old' => v::noWhitespace()->notEmpty(),
+            'password_old' => v::noWhitespace()->notEmpty()->matchesPassword($this->auth->user()->password),
             'password' => v::noWhitespace()->notEmpty(),
 
         ]);
