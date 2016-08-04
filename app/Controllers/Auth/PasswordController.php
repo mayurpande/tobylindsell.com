@@ -2,6 +2,7 @@
 
 namespace App\Controllers\Auth;
 
+use App\Validation\Rules;
 use App\Models\Admin;
 use App\Controllers\Controller;
 

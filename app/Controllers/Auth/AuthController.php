@@ -33,13 +33,14 @@ class AuthController extends Controller{
 			$request->getParam('password')
 		);
 		
-		if(!auth){
+        if(!$auth){
+            $this->flash->addMessage('error','Could not sign you in with those details');
 			return $response->withRedirect($this->router->pathFor('auth.signin'));
 		}
 
 		return $response->withRedirect($this->router->pathFor('admin.update'));
 
-	}
+    }
 
 	//fn to render login page for admin
 	public function getSignUp($request,$response){

@@ -13,7 +13,7 @@ class MatchesPassword extends AbstractRule
     public function __construct($password)
     {
 
-        $this->password = $password
+        $this->password = $password;
 
     }
     

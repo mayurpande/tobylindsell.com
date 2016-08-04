@@ -6,7 +6,12 @@ use App\Models\Admin;
 
 class Auth{
 
-	public function check(){
+
+    public function user()
+    {
+        return Admin::find($_SESSION['user']);
+    }
+    public function check(){
 		return isset($_SESSION['user']);
 	}
 
