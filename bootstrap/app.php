@@ -70,7 +70,7 @@ $container['flash'] = function ($container) {
 
     return new \App\Auth\Auth;
 
-}
+};
 
 
 // Register component on container
