@@ -13,11 +13,11 @@
 
 			<div class="panel panel-default">
 				
-				<div class="panel-heading">News</div>
+				<div class="panel-heading">Upload Image</div>
 
 				<div class="panel-body">
 					
-					<form action="{{ path_for('adminUpload.update') }}" method="post" autcomplete="off">
+					<form action="{{ path_for('adminUpload.update') }}" method="post" enctype="multipart/form-data" autcomplete="off">
 						
 						<div class="form-group{{ errors.email ? ' has-error' : '' }}">
 							
