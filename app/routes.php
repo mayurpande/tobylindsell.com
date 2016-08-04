@@ -1,4 +1,7 @@
 <?php
+
+use App\Middleware\AuthMiddleware;
+
 //calls homecontroller index fn
 $app->get('/','HomeController:index')->setName('home');
 
@@ -18,40 +21,51 @@ $app->get('/admin','AuthController:getSignIn')->setName('auth.signin');
 
 $app->post('/admin','AuthController:postSignIn');
 
-$app->get('/signout','AuthController:getSignOut')->setName('auth.signout');
 
-$app->get('/admin-update-site','AdminController:getUpdateSite')->setName('admin.update');
 
-$app->get('/admin-update-portfolio-1','AdminController:getPort1Update')->setName('adminPort.update');
+//create route group, then will place these routes in the route group
 
-$app->post('/admin-update-portfolio-1','AdminController:postPort1Update');
 
-$app->get('/admin-update-portfolio-2','AdminController:getPort2Update')->setName('adminPort2.update');
+$app->group('', function () {
 
-$app->post('/admin-update-portfolio-2','AdminController:postPort2Update');
+    $this->get('/signout','AuthController:getSignOut')->setName('auth.signout');
 
-$app->get('/admin-update-news','AdminController:getNewsUpdate')->setName('adminNews.update');
+    $this->get('/admin-update-site','AdminController:getUpdateSite')->setName('admin.update');
 
-$app->post('/admin-update-news','AdminController:postNewsUpdate');
+    $this->get('/admin-update-portfolio-1','AdminController:getPort1Update')->setName('adminPort.update');
 
-$app->get('/admin-update-what-info-1','AdminController:getWhat1Update')->setName('adminWhat1.update');
+    $this->post('/admin-update-portfolio-1','AdminController:postPort1Update');
 
-$app->post('/admin-update-what-info-1','AdminController:postWhat1Update');
+    $this->get('/admin-update-portfolio-2','AdminController:getPort2Update')->setName('adminPort2.update');
 
-$app->get('/admin-update-what-info-2','AdminController:getWhat2Update')->setName('adminWhat2.update');
+    $this->post('/admin-update-portfolio-2','AdminController:postPort2Update');
 
-$app->post('/admin-update-what-info-2','AdminController:postWhat2Update');
+    $this->get('/admin-update-news','AdminController:getNewsUpdate')->setName('adminNews.update');
 
-$app->get('/admin-update-what-info-3','AdminController:getWhat3Update')->setName('adminWhat3.update');
+    $this->post('/admin-update-news','AdminController:postNewsUpdate');
 
-$app->post('/admin-update-what-info-3','AdminController:postWhat3Update');
+    $this->get('/admin-update-what-info-1','AdminController:getWhat1Update')->setName('adminWhat1.update');
 
-$app->get('/admin-update-what-info-4','AdminController:getWhat4Update')->setName('adminWhat4.update');
+    $this->post('/admin-update-what-info-1','AdminController:postWhat1Update');
 
-$app->post('/admin-update-what-info-4','AdminController:postWhat4Update');
+    $this->get('/admin-update-what-info-2','AdminController:getWhat2Update')->setName('adminWhat2.update');
 
-$app->get('/admin-password-change','PasswordController:getChangePassword')->setName('auth.password.change');
+    $this->post('/admin-update-what-info-2','AdminController:postWhat2Update');
 
-$app->post('/admin-password-change','PasswordController:postChangePassword');
+    $this->get('/admin-update-what-info-3','AdminController:getWhat3Update')->setName('adminWhat3.update');
+
+    $this->post('/admin-update-what-info-3','AdminController:postWhat3Update');
+
+    $this->get('/admin-update-what-info-4','AdminController:getWhat4Update')->setName('adminWhat4.update');
+
+    $this->post('/admin-update-what-info-4','AdminController:postWhat4Update');
+
+    $this->get('/admin-password-change','PasswordController:getChangePassword')->setName('auth.password.change');
+
+    $this->post('/admin-password-change','PasswordController:postChangePassword');
+
+
+
+})->add(new AuthMiddleware($container));
 
 
