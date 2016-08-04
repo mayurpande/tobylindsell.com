@@ -1,5 +1,6 @@
 <?php
 
+use Respect\Validation\Validator as v;
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 require __DIR__ . '/../app/config/auth.php';
@@ -152,6 +153,9 @@ $container['AdminController'] = function($container){
 $app->add(new \App\Middleware\ValidationErrorsMiddleware($container));
 
 $app->add(new \App\Middleware\OldInputMiddleware($container));
+
+v::with('App\\Validation\\Rules');
+
 
 $app->add(new \App\Middleware\CsrfViewMiddleware($container));
 //csrf turned on
