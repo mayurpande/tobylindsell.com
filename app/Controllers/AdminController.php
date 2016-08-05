@@ -79,7 +79,7 @@ class AdminController extends Controller{
 		
         $whatPage = What_We_Do::where("id","1")->first();
         $new_what_data = array(
-            'what_img' => $request->getParam('what_img')
+            'what_img' => $request->getParam('what_img'),
         );
         $whatPage->fill($new_what_data);
         $whatPage->save();
