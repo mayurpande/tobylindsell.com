@@ -72,6 +72,10 @@ $app->group('', function () {
 
     $this->post('/admin-update-what-info-4','AdminController:postWhat4Update');
 
+    $this->get('/admin-update-about','AdminController:getAboutUpdate')->setName('adminAbout.update');
+
+    $this->post('/admin-update-about','AdminController:postAboutUpdate');
+    
     $this->get('/admin-password-change','PasswordController:getChangePassword')->setName('auth.password.change');
 
     $this->post('/admin-password-change','PasswordController:postChangePassword');
