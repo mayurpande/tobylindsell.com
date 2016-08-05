@@ -74,7 +74,7 @@ $app->group('', function () {
 
     $this->get('/admin-upload-image','ImageController:getImageUpload')->setName('adminUpload.update');
 
-    $this->post('admin-upload-image','ImageController:postImageUpload');
+    $this->post('/admin-upload-image','ImageController:postImageUpload');
 
 })->add(new AuthMiddleware($container));
 
