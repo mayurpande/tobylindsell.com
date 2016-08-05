@@ -6,7 +6,7 @@ use App\Models\Home_Page;
 use App\Models\What_We_Do_Info;
 use App\Models\Port_Page;
 use App\Controllers\Controller;
-
+use App\Models\What_We_Do;
 //import validator
 use Respect\Validation\Validator as v;
 
@@ -76,7 +76,12 @@ class AdminController extends Controller{
 
 	public function postWhat1Update($request,$response){
 		
-
+        $whatPage = What_We_Do::where("id","1")->first();
+        $new_what_data = array(
+            'what_img' => $request->getParam('what_img')
+        );
+        $whatPage->fill($new_what_data);
+        $whatPage->save();
 		$portfolio = What_We_Do_Info::where("id","1")->first();
 		$new_port_data = array(
 			'heading' => $request->getParam('heading'),
