@@ -8,7 +8,7 @@
 				{% if active_page == 'home' %}
 					class="navbar-brand active"
 				{% else %}
-					class="navbar-brand"%}
+					class="navbar-brand"
 				{% endif %}>
 					<img src="../../img/decorum.jpg" alt="Decorum Home Image" class="img-responsive" />
 			</a>
@@ -36,7 +36,36 @@
 				<li{% if active_page == 'about' %} class="active"{% endif %}><a href="{{ path_for('about') }}">About Us</a></li>
 				
 				<li{% if active_page == 'contact' %} class="active"{% endif %}><a href="{{ path_for('contact') }}">Contact Us</a></li>
+				
+				{% if auth.check %}
 
+					
+					<li class="dropdown">
+						
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin 
+						<span class="caret"></span>
+						</a>
+
+						<ul class="dropdown-menu">
+							
+							<li><a href="{{ path_for('adminNews.update') }}">Update News</a></li>
+                            <li><a href="{{ path_for('adminPort.update') }}">Update Portfolio 1</a></li>
+							<li><a href="{{ path_for('adminPort2.update') }}">Update Portfolio 2</a></li>
+                            <li><a href="{{ path_for('adminWhatUrl.update') }}">Update What We Do Url</a></li>
+							<li><a href="{{ path_for('adminWhat1.update') }}">Update What We Do Info Part 1</a></li>							
+							<li><a href="{{ path_for('adminWhat2.update') }}">Update What We Do Info Part 2</a></li>
+							<li><a href="{{ path_for('adminWhat3.update') }}">Update What We Do Info Part 3</a></li>
+							<li><a href="{{ path_for('adminWhat4.update') }}">Update What We Do Info Part 4</a></li>
+                            <li><a href="{{ path_for('adminAbout.update') }}">Update About Us</a></li>
+                            <li><a href="{{ path_for('adminUpload.update') }}">Upload Image</a></li>
+							<li><a href="{{ path_for('auth.password.change') }}">Change Password</a></li>
+							<li><a href="{{ path_for('auth.signout') }}">Sign Out</a></li>
+
+						</ul>
+
+					</li>
+
+				{% endif %}
 			</ul>
 		
 		</div>

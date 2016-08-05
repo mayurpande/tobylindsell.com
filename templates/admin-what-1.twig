@@ -1,0 +1,67 @@
+{% extends 'main.twig' %}
+
+{% block title %}Admin - Update Content{% endblock %}
+
+
+{% block heading %}Update What We Do Info{% endblock %}
+
+{% block admin %}
+	
+	<div class="row">
+		
+		<div class=".col-md-6 col-md-offset-3 for">
+
+			<div class="panel panel-default">
+				
+				<div class="panel-heading">What We do Info Part 1</div>
+
+				<div class="panel-body">
+					
+					<form action="{{ path_for('adminWhat1.update') }}" method="post" autcomplete="off">
+						 
+                        
+                        
+                        <div class="form-group{{ errors.email ? ' has-error' : '' }}">
+							
+							<label for="heading">What We Do Info Heading Part 1</label>
+
+							<input type"text" name="heading" id="heading" class="form-control" >
+
+
+						</div>
+					
+						<div class="form-group{{ errors.password ? ' has-error' : '' }}">
+											
+							<label for="para1">What We Do Info Part 1 Paragraph 1</label>
+
+							<input type="text" name="para1" id="para1" class="form-control">
+
+							
+						</div>
+
+						<div class="form-group">
+											
+							<label for="para2">What We Do Info Part 1 Paragraph 2</label>
+
+							<input type="text" name="para2" id="para2" class="form-control">
+
+							
+						</div>
+
+						<button type="submit" class="btn btn-default">Update What We Do Info Part 1</button>
+
+						{{ csrf.field | raw }}
+						
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	
+	
+{% endblock %}
+

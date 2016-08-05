@@ -2,3 +2,4 @@ vendor/*
 composer.json~
 app/config/auth.php
 img/Decorum_Logo-01.eps
+app/Controllers/Auth/.AuthController.php.swp

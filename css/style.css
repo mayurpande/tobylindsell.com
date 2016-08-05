@@ -108,6 +108,25 @@ INNERBOX
 	width:100%;
 }
 
+
+
+/****************************
+ * ADMIN PAGE (INNERBOX)
+ * ************************/
+
+
+.row{
+	margin:0 auto;
+	width:80%;
+}
+
+
+#admin-info{
+	margin:0 auto;
+	padding:0 10px;
+}
+
+
 /*****************************
  * ABOUT US PAGE (INNERBOX)
  ****************************/
@@ -184,7 +203,9 @@ body{
 a{
 	color: #fff;
 }
-
+label{
+	color:#222;
+}
 a:hover{
 	color: #E81AB4;
 }
