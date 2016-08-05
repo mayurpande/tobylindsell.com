@@ -52,6 +52,10 @@ $app->group('', function () {
 
     $this->post('/admin-update-news','AdminController:postNewsUpdate');
 
+    $this->get('/admin-update-what-url','AdminController:getWhatUrlUpdate')->setName('adminWhatUrl.update');
+
+    $this->post('/admin-update-what-url','AdminController:postWhatUrlUpdate');
+
     $this->get('/admin-update-what-info-1','AdminController:getWhat1Update')->setName('adminWhat1.update');
 
     $this->post('/admin-update-what-info-1','AdminController:postWhat1Update');
