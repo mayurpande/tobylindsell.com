@@ -24,15 +24,26 @@ class AdminController extends Controller{
 	public function postPort1Update($request,$response){
 		
 
-		$portfolio = Port_Page::where("id","1")->first();
-		$new_port_data = array(
+		$portfolio1 = Port_Page::where("id","1")->first();
+		$new_port1_data = array(
 			'port_img' => $request->getParam('port_img'),
 			'port_para' => $request->getParam('port_para')
 		);
-		$portfolio->fill($new_port_data);
-		$portfolio->save();
 
-		return $response->withRedirect($this->router->pathFor('admin.update'));
+        if ($portfolio1->fill($new_port1_data) && $portfolio1->save()) {
+
+            $this->flash->addMessage('success','You have updated portfolio 1');
+        
+		    return $response->withRedirect($this->router->pathFor('admin.update'));
+        
+        } else {
+
+            $this->flash->addMessage('error','You have not updated portfolio 1');
+
+            return $response->withRedirect($this->router->pathFor('admin.update'));
+        }            
+
+
 	}
 
 	public function getPort2Update($request,$response){
@@ -42,15 +53,24 @@ class AdminController extends Controller{
 	public function postPort2Update($request,$response){
 		
 
-		$portfolio = Port_Page::where("id","2")->first();
-		$new_port_data = array(
+		$portfolio2 = Port_Page::where("id","2")->first();
+		$new_port2_data = array(
 			'port_img' => $request->getParam('port_img'),
 			'port_para' => $request->getParam('port_para')
 		);
-		$portfolio->fill($new_port_data);
-		$portfolio->save();
+        
+        if ($portfolio2->fill($new_port2_data) && $portfolio2->save()) {
 
-		return $response->withRedirect($this->router->pathFor('admin.update'));
+            $this->flash->addMessage('success','You have updated portfolio 2');
+        
+		    return $response->withRedirect($this->router->pathFor('admin.update'));
+        
+        } else {
+
+            $this->flash->addMessage('error','You have not updated portfolio 2');
+
+            return $response->withRedirect($this->router->pathFor('admin.update'));
+        }
 	}
 
 	public function getNewsUpdate($request,$response){
@@ -60,16 +80,25 @@ class AdminController extends Controller{
 	public function postNewsUpdate($request,$response){
 		
 
-		$portfolio = Home_Page::where("id","1")->first();
-		$new_port_data = array(
+		$news = Home_Page::where("id","1")->first();
+		$new_news_data = array(
 			'home_img' => $request->getParam('home_img'),
 			'home_para' => $request->getParam('home_para')
 		);
-		$portfolio->fill($new_port_data);
-		$portfolio->save();
+        
+        if ($news->fill($new_news_data) && $news->save()) {
 
-		return $response->withRedirect($this->router->pathFor('admin.update'));
-	}
+            $this->flash->addMessage('success','You have updated news page');
+        
+		    return $response->withRedirect($this->router->pathFor('admin.update'));
+        
+        } else {
+
+            $this->flash->addMessage('error','You have not updated news page');
+
+            return $response->withRedirect($this->router->pathFor('admin.update'));
+        }
+}
 
     
     public function getWhatUrlUpdate($request,$response){
@@ -84,8 +113,20 @@ class AdminController extends Controller{
         );
         $whatPage->fill($new_what_data);
         $whatPage->save();
+
+        if ($whatPage->fill($new_what_data) && $whatPage->save()) {
+
+            $this->flash->addMessage('success','You have updated what we do page url string');
         
-        return $response->withRedirect($this->router->pathFor('admin.update'));
+		    return $response->withRedirect($this->router->pathFor('admin.update'));
+        
+        } else {
+
+            $this->flash->addMessage('error','You have not updated what we do page url string');
+
+            return $response->withRedirect($this->router->pathFor('admin.update'));
+        }
+
 	}
     
     
@@ -96,23 +137,26 @@ class AdminController extends Controller{
 
 	public function postWhat1Update($request,$response){
 		
-        $whatPage = What_We_Do::where("id","1")->first();
-        $new_what_data = array(
-            'what_img' => $request->getParam('what_img')
-        );
-        $whatPage->fill($new_what_data);
-        $whatPage->save();
-		$portfolio = What_We_Do_Info::where("id","1")->first();
-		$new_port_data = array(
+        $whatPageInfo1 = What_We_Do_Info::where("id","1")->first();
+		$new_whatInfo1_data = array(
 			'heading' => $request->getParam('heading'),
 			'para1' => $request->getParam('para1'),
 			'para2' => $request->getParam('para2')
 		);
-		$portfolio->fill($new_port_data);
-		$portfolio->save();
+        
+        if ($whatPageInfo1->fill($new_whatInfo1_data) && $whatPageInfo1->save()) {
 
-		return $response->withRedirect($this->router->pathFor('admin.update'));
-	}
+            $this->flash->addMessage('success','You have updated what we do page info 1');
+        
+		    return $response->withRedirect($this->router->pathFor('admin.update'));
+        
+        } else {
+
+            $this->flash->addMessage('error','You have not updated what we do page info 1');
+
+            return $response->withRedirect($this->router->pathFor('admin.update'));
+        }
+    }
 
 	public function getWhat2Update($request,$response){
 		return $this->view->render($response,'admin-what-2.twig');
@@ -121,16 +165,27 @@ class AdminController extends Controller{
 	public function postWhat2Update($request,$response){
 		
 
-		$portfolio = What_We_Do_Info::where("id","2")->first();
-		$new_port_data = array(
+		$whatPageInfo2 = What_We_Do_Info::where("id","2")->first();
+		$new_whatInfo2_data = array(
 			'heading' => $request->getParam('heading'),
 			'para1' => $request->getParam('para1'),
 			'para2' => $request->getParam('para2')
 		);
-		$portfolio->fill($new_port_data);
-		$portfolio->save();
+        
+        
+        if ($whatPageInfo2->fill($new_whatInfo2_data) && $whatPageInfo2->save()) {
 
-		return $response->withRedirect($this->router->pathFor('admin.update'));
+            $this->flash->addMessage('success','You have updated what we do page info 2');
+        
+		    return $response->withRedirect($this->router->pathFor('admin.update'));
+        
+        } else {
+
+            $this->flash->addMessage('error','You have not updated what we do page info 2');
+
+            return $response->withRedirect($this->router->pathFor('admin.update'));
+        }
+	
 	}
 
 	public function getWhat3Update($request,$response){
@@ -140,8 +195,8 @@ class AdminController extends Controller{
 	public function postWhat3Update($request,$response){
 		
 
-		$portfolio = What_We_Do_Info::where("id","3")->first();
-		$new_port_data = array(
+		$whatPageInfo3 = What_We_Do_Info::where("id","3")->first();
+		$new_whatInfo3_data = array(
 			'heading' => $request->getParam('heading'),
 			'para1' => $request->getParam('para1'),
 			'para2' => $request->getParam('para2'),
@@ -150,10 +205,20 @@ class AdminController extends Controller{
 			'sub_heading2' => $request->getParam('sub_heading2'),
 			'sub_para2' => $request->getParam('sub_para2')
 		);
-		$portfolio->fill($new_port_data);
-		$portfolio->save();
+		 
+        if ($whatPageInfo3->fill($new_whatInfo3_data) && $whatPageInfo3->save()) {
 
-		return $response->withRedirect($this->router->pathFor('admin.update'));
+            $this->flash->addMessage('success','You have updated what we do page info 3');
+        
+		    return $response->withRedirect($this->router->pathFor('admin.update'));
+        
+        } else {
+
+            $this->flash->addMessage('error','You have not updated what we do page info 3');
+
+            return $response->withRedirect($this->router->pathFor('admin.update'));
+        }
+
 	}
 
 
@@ -164,15 +229,26 @@ class AdminController extends Controller{
 	public function postWhat4Update($request,$response){
 		
 
-		$portfolio = What_We_Do_Info::where("id","4")->first();
-		$new_port_data = array(
+		$whatPageInfo4 = What_We_Do_Info::where("id","4")->first();
+		$new_whatInfo4_data = array(
 			'heading' => $request->getParam('heading'),
 			'para1' => $request->getParam('para1')
 		);
-		$portfolio->fill($new_port_data);
-		$portfolio->save();
+        
+        
+        if ($whatPageInfo4->fill($new_whatInfo4_data) && $whatPageInfo4->save()) {
 
-		return $response->withRedirect($this->router->pathFor('admin.update'));
+            $this->flash->addMessage('success','You have updated what we do page info 4');
+        
+		    return $response->withRedirect($this->router->pathFor('admin.update'));
+        
+        } else {
+
+            $this->flash->addMessage('error','You have not updated what we do page info 4');
+
+            return $response->withRedirect($this->router->pathFor('admin.update'));
+        }
+
     }
 
     public function getAboutUpdate($request,$response){
@@ -191,10 +267,22 @@ class AdminController extends Controller{
 
 
 		);
-		$aboutUs->fill($new_about_data);
-		$aboutUs->save();
+        
+    
+        if ($aboutUs->fill($new_about_data) && $aboutUs->save()) {
 
-		return $response->withRedirect($this->router->pathFor('admin.update'));
+            $this->flash->addMessage('success','You have updated About us page');
+        
+		    return $response->withRedirect($this->router->pathFor('admin.update'));
+        
+        } else {
+
+            $this->flash->addMessage('error','You have not updated about us');
+
+            return $response->withRedirect($this->router->pathFor('admin.update'));
+        }
+
+
 	}
 
 
