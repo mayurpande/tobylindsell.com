@@ -74,6 +74,8 @@ $container['flash'] = function ($container) {
 };
 
 
+
+
 // Register component on container
 $container['view'] = function ($container) {
 	$view = new \Slim\Views\Twig(__DIR__ . '/../templates', [
@@ -91,6 +93,8 @@ $container['view'] = function ($container) {
     ]);
 
     $view->getEnvironment()->addGlobal('flash',$container->flash);
+
+    
 
     return $view;
 };
