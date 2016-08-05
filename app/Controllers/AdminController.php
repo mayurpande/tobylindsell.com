@@ -156,7 +156,7 @@ class AdminController extends Controller{
 	}
 
 
-public function getWhat4Update($request,$response){
+    public function getWhat4Update($request,$response){
 		return $this->view->render($response,'admin-what-4.twig');
 	}
 
@@ -172,7 +172,30 @@ public function getWhat4Update($request,$response){
 		$portfolio->save();
 
 		return $response->withRedirect($this->router->pathFor('admin.update'));
+    }
+
+    public function getAboutUpdate($request,$response){
+		return $this->view->render($response,'admin-about.twig');
 	}
+
+	public function postAboutUpdate($request,$response){
+		
+
+		$aboutUs = About_Us::where("id","1")->first();
+		$new_about_data = array(
+			'about_img' => $request->getParam('about_img'),
+            'about_para' => $request->getParam('about_para'),
+            'about_para1' => $request->getParam('about_para1'),
+            'about_para2' => $request->getParam('about_para2'),
+
+
+		);
+		$aboutUs->fill($new_about_data);
+		$aboutUs->save();
+
+		return $response->withRedirect($this->router->pathFor('admin.update'));
+	}
+
 
 }
 
