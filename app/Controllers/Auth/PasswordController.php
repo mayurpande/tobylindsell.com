@@ -29,6 +29,9 @@ class PasswordController extends Controller
         ]);
 
         if ($validation->failed()) {
+            
+            //flash a message
+            $this->flash->addMessage('error','These passwords are not the same.');
 
             return $response->withRedirect($this->router->pathFor('auth.password.change'));
         
