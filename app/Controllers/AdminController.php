@@ -70,7 +70,26 @@ class AdminController extends Controller{
 		return $response->withRedirect($this->router->pathFor('admin.update'));
 	}
 
-	public function getWhat1Update($request,$response){
+    
+    public function getWhatUrlUpdate($request,$response){
+		return $this->view->render($response,'admin-what-url.twig');
+	}
+
+	public function postWhatUrlUpdate($request,$response){
+		
+        $whatPage = What_We_Do::where("id","1")->first();
+        $new_what_data = array(
+            'what_img' => $request->getParam('what_img')
+        );
+        $whatPage->fill($new_what_data);
+        $whatPage->save();
+        
+        return $response->withRedirect($this->router->pathFor('admin.update'));
+	}
+    
+    
+    
+    public function getWhat1Update($request,$response){
 		return $this->view->render($response,'admin-what-1.twig');
 	}
 
