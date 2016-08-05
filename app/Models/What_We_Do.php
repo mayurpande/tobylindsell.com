@@ -14,5 +14,7 @@ class What_We_Do extends Model{
 	//with the plural version. If your table differs we can explicitly name it like below
 	protected $table = 'what_page';
 
-
+    protected $fillable = [
+		'what_img'
+	];
 }

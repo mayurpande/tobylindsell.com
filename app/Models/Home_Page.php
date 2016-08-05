@@ -14,5 +14,8 @@ class Home_Page extends Model{
 	//with the plural version. If your table differs we can explicitly name it like below
 	protected $table = 'home_page';
 
-
+	protected $fillable = [
+		'home_img',
+		'home_para',
+	];
 }
