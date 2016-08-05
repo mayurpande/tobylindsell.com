@@ -14,5 +14,10 @@ class About_Us extends Model{
 	//with the plural version. If your table differs we can explicitly name it like below
 	protected $table = 'about_us';
 
-
+    protected $fillable = [
+        'about_img',
+        'about_para',
+        'about_para1',
+        'about_para2',
+    ];
 }
