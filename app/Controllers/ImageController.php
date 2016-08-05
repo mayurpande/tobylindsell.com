@@ -46,15 +46,19 @@ class ImageController extends Controller
         );
         // Try to upload file
         try {
-            // Success!
-            $file->upload();
-            return $response->withRedirect($this->router->pathFor('admin.update'));
+            
+            if ($file->upload()) {
+                $this->flash->addMessage('success','Image uploaded');
+                $this->flash->addMessage('info','Make sure to add the same name i.e. image.jpg as a string in other form submission');
+                return $response->withRedirect($this->router->pathFor('admin.update')); 
+            }
+	
         } catch (\Exception $e) {
             // Fail!
             $errors = $file->getErrors();
-        }        
-       
-	
-	}
-
+        
+            $this->flash->addMessage('error',$errors);
+            return $response->withRedirect($this->router->pathFor('admin.update'));
+        }
+    }
 }	
