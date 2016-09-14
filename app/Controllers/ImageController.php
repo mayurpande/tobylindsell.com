@@ -24,8 +24,8 @@ class ImageController extends Controller
         $storage = new \Upload\Storage\FileSystem($_SERVER['DOCUMENT_ROOT'] . "/img");
         $file = new \Upload\File('upload',$storage);
 
-        $new_filename = uniqid();
-        $file->setName($new_filename);
+      //  $new_filename = uniqid();
+       // $file->setName($new_filename);
 
        
         $file->addValidations(array(
