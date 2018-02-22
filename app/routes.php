@@ -14,9 +14,8 @@ $app->get('/about-us','AboutUsController:index')->setName('about');
 
 $app->get('/contact-us','ContactUsController:index')->setName('contact');
 
-
 $app->group('', function () {
-    
+    //comment out these two lines
     //$app->get('/admin','AuthController:getSignUp')->setName('auth.signup');
 
     //$app->post('/admin','AuthController:postSignUp');
