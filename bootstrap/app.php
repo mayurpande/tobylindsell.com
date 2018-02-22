@@ -18,7 +18,7 @@ $app = new \Slim\App([
 		//we will put setting in here, we won't use an external package to manage our configuration
 		//This can be done later, we will just add them to our slim configuration, it makes more sense
 		//to get quickly going with this
-		'db' => $config	
+		'db' => $config
 	
 	],
 	
